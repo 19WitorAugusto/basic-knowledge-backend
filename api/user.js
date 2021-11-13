@@ -52,7 +52,7 @@ module.exports = app => {
             .select('id', 'name', 'email', 'admin')
             .then(users => res.json(users))
             .catch(err => res.status(500).send(err))
-    }
+    } 
 
 
     const getById = (req, res) => {
