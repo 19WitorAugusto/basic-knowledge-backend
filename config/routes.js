@@ -8,11 +8,11 @@ module.exports = app => {
         .get(app.api.user.getById)
 
     app.route('/categories')
-        .get(app.api.category.get)
-        .post(app.api.category.save)
+        .post(app.api.categories.save)
+        .get(app.api.categories.get)
 
     app.route('/categories/:id')
-        .get(app.api.category.getById)
-        .put(app.api.category.save)
-        .delete(app.api.category.remove)
+        .get(app.api.categories.getById)
+        .put(app.api.categories.save)
+        .delete(app.api.categories.remove)
 }
