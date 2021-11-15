@@ -8,8 +8,13 @@ module.exports = app => {
         .get(app.api.user.getById)
 
     app.route('/categories')
-        .post(app.api.categories.save)
         .get(app.api.categories.get)
+        .post(app.api.categories.save)
+
+
+    //Cuidado com ordem! Tem que vir antes de /categories/:id
+    app.route('/categories/tree')
+        .get(app.api.categories.getTree)
 
     app.route('/categories/:id')
         .get(app.api.categories.getById)
