@@ -1,4 +1,3 @@
-
 module.exports = app => {
     const { existsOrError, notExistsOrError } = app.api.validation
 
@@ -100,7 +99,7 @@ module.exports = app => {
 
     const getTree = (req, res) => {
         app.db('categories')
-            .then(categories => res.json(toTree(withPath(categories))))
+            .then(categories => res.json(toTree(ategories)))
             .catch(err => res.status(500).send(err))
     }
 

@@ -11,6 +11,15 @@ module.exports = app => {
         .get(app.api.categories.get)
         .post(app.api.categories.save)
 
+    app.route('/articles')
+        .get(app.api.articles.get)
+        .post(app.api.articles.save)
+
+    app.route('/articles/:id')
+        .get(app.api.articles.getById)
+        .put(app.api.articles.save)
+        .delete(app.api.articles.remove)
+
 
     //Cuidado com ordem! Tem que vir antes de /categories/:id
     app.route('/categories/tree')
